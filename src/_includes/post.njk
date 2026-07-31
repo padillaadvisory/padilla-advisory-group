@@ -1,0 +1,54 @@
+---
+layout: base.njk
+ogType: article
+---
+<article class="article">
+  <div class="col">
+    <p class="meta">{{ site.blogName }} &middot; {{ page.date | readableDate }}</p>
+    <h1>{{ title }}</h1>
+    <div class="lede-line"></div>
+    <div class="body">
+      {{ content | safe }}
+      {% if disclaimer !== false %}<p class="disclaimer">This article is general information, not tax or legal advice. For your specific situation, talk to a qualified professional.</p>{% endif %}
+    </div>
+  </div>
+
+  <div class="author-box">
+    <img src="/assets/portrait.jpg" alt="{{ site.advisor.short }}" />
+    <div>
+      <div class="who">{{ site.advisor.short }}</div>
+      <div class="role">{{ site.advisor.title }}, {{ site.name }} at {{ site.brokerage }} &middot; DRE #{{ site.advisor.dre }}</div>
+      <p>Alex works exclusively with longtime {{ site.city }} homeowners who are downsizing, unlocking equity, or transitioning into their next chapter.</p>
+    </div>
+  </div>
+
+  <p class="backlink"><a href="/blog/">&larr; All articles</a></p>
+</article>
+
+<section class="article-cta">
+  <div class="glow-top"></div>
+  <div class="wrap">
+    <p class="eyebrow">Your move, your numbers</p>
+    <h2>Thinking about your own next chapter?</h2>
+    <p>Start with a conversation &mdash; an honest look at what your home is worth today and what your options are. No pressure.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="/#contact">Request your equity analysis</a>
+      <a class="btn btn-ghost" href="/#playbook">Get the free playbook</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  "description": {{ (description or "") | dump | safe }},
+  "datePublished": "{{ page.date | isoDate }}",
+  "dateModified": "{{ page.date | isoDate }}",
+  "author": { "@type": "Person", "name": "{{ site.advisor.name }}", "url": "{{ site.url }}/" },
+  "publisher": { "@type": "Organization", "name": "{{ site.name }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/emblem-512.png" } },
+  "image": "{{ site.url }}{{ image or '/assets/og-image.jpg' }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
+}
+</script>

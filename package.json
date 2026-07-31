@@ -1,0 +1,14 @@
+{
+  "name": "padilla-advisory-group",
+  "version": "1.0.0",
+  "description": "Padilla Advisory Group — Los Angeles downsizing & home sales. Eleventy static site with weekly blog.",
+  "scripts": {
+    "start": "eleventy --serve --port=8080",
+    "build": "eleventy"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

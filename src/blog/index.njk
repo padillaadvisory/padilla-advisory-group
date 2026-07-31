@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: "The Downsizing Journal | Padilla Advisory Group"
+description: "Straight-talking articles on downsizing in Los Angeles — timing, taxes (Prop 19), preparing to sell, and moving forward. Written by Alex Padilla."
+---
+<section class="page-hero">
+  <div class="glow-top"></div>
+  <div class="wrap">
+    <div class="hero-rule"></div>
+    <p class="eyebrow">{{ site.blogName }}</p>
+    <h1>Clear thinking on downsizing in {{ site.city }}.</h1>
+    <p class="intro">Timing, taxes, preparing to sell, and moving forward &mdash; written for longtime homeowners by {{ site.advisor.short }}. No pitch, just what actually matters.</p>
+  </div>
+</section>
+<section class="post-list">
+  <div class="wrap">
+    <div class="items">
+      {% for post in collections.posts %}
+      <a class="post-card" href="{{ post.url }}">
+        <span class="meta">{{ post.date | readableDate }}</span>
+        <h2>{{ post.data.title }}</h2>
+        {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+        <span class="more">Read the article &rarr;</span>
+      </a>
+      {% endfor %}
+      {% if collections.posts.length === 0 %}
+      <p style="padding:2rem 0;color:#4a5461;">New articles are on the way.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
