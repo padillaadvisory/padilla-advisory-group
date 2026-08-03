@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
     brokerage: "PLG Estates",
     phoneDisplay: "(424) 344-8164",
     phoneHref: "+14243448164",
-    email: "alex.padilla@plgestatesinc.com",
+    email: "alex@padillaadvisorygroup.com",
     address: { street: "9800 Wilshire Blvd", locality: "Beverly Hills", region: "CA", postal: "90212" },
     facebook: "https://www.facebook.com/PadillaAdvisoryGroup",
     blogName: "The Downsizing Journal",
