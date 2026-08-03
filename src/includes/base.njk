@@ -46,6 +46,7 @@
     <div>
       <img class="flogo" src="/assets/logo-white.png" alt="{{ site.name }} at {{ site.brokerage }}" />
       <div class="ftag">{{ site.tagline }}</div>
+      {% if collections.locations.length %}<div class="areas">{% for loc in collections.locations %}<a href="{{ loc.url }}">{{ loc.data.name }}</a>{% endfor %}</div>{% endif %}
     </div>
     <p class="legal">
       {{ site.name }} at {{ site.brokerage }} &middot; {{ site.advisor.short }}, CA DRE #{{ site.advisor.dre }}.

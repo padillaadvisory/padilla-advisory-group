@@ -41,6 +41,13 @@ module.exports = function (eleventyConfig) {
     c.getFilteredByGlob("src/blog/posts/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // Location / service-area pages, alphabetical
+  eleventyConfig.addCollection("locations", (c) =>
+    c.getFilteredByGlob("src/locations/*.md").sort((a, b) =>
+      (a.data.name || "").localeCompare(b.data.name || "")
+    )
+  );
+
   return {
     // includes folder has NO underscore, so GitHub's uploader won't drop it
     dir: { input: "src", includes: "includes", output: "_site" },

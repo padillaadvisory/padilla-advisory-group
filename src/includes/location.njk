@@ -1,0 +1,216 @@
+---
+layout: base.njk
+---
+{%- set topHoods = neighborhoods[0] + ", " + neighborhoods[1] + ", and " + neighborhoods[2] -%}
+{%- set zipList = zips | join(", ") -%}
+{%- set faqs = [
+  { "q": "How much is my home worth in " + name + "?",
+    "a": "The honest answer is that it depends on the street, the condition, and the moment — " + name + " values vary block to block. We give you a straight, no-obligation valuation based on current comparable sales in " + name + ", not a generic online estimate. It is free, and there is no pressure to list." },
+  { "q": "How fast do homes sell in " + name + "?",
+    "a": "Well-prepared, correctly-priced " + name + " homes still move quickly to motivated buyers. The single biggest factor is pricing it right from day one — homes that are priced accurately and shown well tend to sell far faster than those that 'test the market' and chase it down." },
+  { "q": "Which " + name + " neighborhoods are most in demand?",
+    "a": "Pockets like " + topHoods + " tend to draw the strongest buyer interest, along with homes south of Ventura Boulevard and inside the most sought-after school boundaries. We can tell you exactly how your specific location and street affect your sale." },
+  { "q": "Do you help with probate or trust sales in " + name + "?",
+    "a": "Yes. We regularly help families and executors sell inherited and trust-held property in " + name + ", coordinating with your attorney, handling clean-out and preparation, and guiding the sale start to finish with patience and discretion." },
+  { "q": "Can you sell a house during a divorce in " + name + "?",
+    "a": "Yes. Selling a " + name + " home during a divorce calls for neutrality, clear communication with both parties and any attorneys, and a smooth, low-drama process. We keep it professional and moving so the sale isn't the thing holding everyone up." },
+  { "q": "I'm downsizing from a " + name + " home — where do I start?",
+    "a": "Start with a conversation. We'll walk your home, give you its current value, and map the whole path — prep, belongings, listing, sale, and the move — as one plan on your timeline. Downsizing longtime " + name + " owners is the heart of what we do." },
+  { "q": "Do you charge for a home valuation?",
+    "a": "No. Your " + name + " home valuation is complimentary and comes with no obligation — just an honest look at what your home is worth today and what your options are." },
+  { "q": "Do you represent buyers, or only sellers?",
+    "a": "We work the sell side only. In " + name + ", that means our entire focus is getting sellers the most equity with the least stress — we are never distracted representing the other side of the table." }
+] -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "@id": "{{ site.url }}{{ page.url }}#agent",
+  "name": "{{ site.name }} — {{ name }}",
+  "description": {{ description | dump | safe }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "telephone": "+1-424-344-8164",
+  "email": "{{ site.email }}",
+  "image": "{{ site.url }}/assets/og-image.jpg",
+  "areaServed": {
+    "@type": "Place",
+    "name": "{{ name }}, Los Angeles, CA",
+    "geo": { "@type": "GeoCoordinates", "latitude": {{ lat }}, "longitude": {{ lng }} }
+  },
+  "knowsAbout": ["downsizing","divorce home sale","probate sale","trust sale","inherited property","relocation","senior transition","home valuation","{{ name }} real estate"],
+  "parentOrganization": { "@type": "Organization", "name": "{{ site.brokerage }}" },
+  "employee": { "@type": "Person", "name": "{{ site.advisor.name }}", "jobTitle": "{{ site.advisor.title }}" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "{{ name }}", "item": "{{ site.url }}{{ page.url }}" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for f in faqs %}
+    { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- set services = ["Downsizing home sales","Divorce home sales","Probate and trust sales","Relocation home sales"] -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {%- for s in services %}
+    { "@type": "ListItem", "position": {{ loop.index }}, "item": { "@type": "Service", "name": "{{ s }} in {{ name }}", "areaServed": { "@type":"Place","name":"{{ name }}, CA" }, "provider": { "@id": "{{ site.url }}/#org" } } }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+
+<!-- HERO -->
+<section class="page-hero loc-hero">
+  <div class="glow-top"></div>
+  <div class="horizon"></div>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>{{ name }}</span></nav>
+    <div class="hero-rule"></div>
+    <p class="eyebrow">{{ name }} &middot; Life-Transition Home Sales</p>
+    <h1>Selling a {{ name }} home when life changes.</h1>
+    <p class="intro">Downsizing, divorce, probate, or a move you've put off for years — when it's time to sell a {{ name }} home through a life transition, Padilla Advisory Group represents you, and only you. The most equity, the least stress, handled with discretion.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/#contact">Request your free {{ name }} valuation</a>
+      <a class="btn btn-ghost" href="#transitions">See how we help</a>
+    </div>
+    <p class="hero-meta">Serving {{ name }} &mdash; ZIP {{ zipList }} &middot; {{ region | title }}</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="moment">
+  <div class="wrap" style="max-width:820px;">
+    <p class="eyebrow">Local, and sell-side only</p>
+    <p class="big">Life transitions are hard enough. Selling the house shouldn't add to the weight.</p>
+    <p>{{ market_note }}</p>
+    <p>We work exclusively with {{ name }} homeowners who are selling — never buyers — so every ounce of our attention goes to your equity, your timeline, and your peace of mind. Whatever brought you to this decision, we've guided people through it before, right here in {{ name }}.</p>
+  </div>
+</section>
+
+<!-- TRANSITIONS -->
+<section id="transitions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The situations we handle</p>
+      <h2>However life got you here, we've done this before.</h2>
+      <p>Each of these calls for a different touch. Here's how we handle the most common reasons {{ name }} homeowners sell.</p>
+    </div>
+
+    <div class="trans reveal">
+      <h3>Downsizing in {{ name }}</h3>
+      <p>The heart of what we do. If you've owned your {{ name }} home for decades and it's become more house than you need, we handle the whole transition as one plan — valuation, prep, staging, the sale, sorting a lifetime of belongings, and the move — so you land in your next chapter without the overwhelm. You unlock the equity you've built and move once, on your timeline.</p>
+    </div>
+    <div class="trans reveal">
+      <h3>Selling during a divorce in {{ name }}</h3>
+      <p>Selling a shared {{ name }} home during a divorce takes neutrality and a steady hand. We communicate clearly with both parties and any attorneys, keep the process calm and professional, and move the sale forward efficiently — so the house isn't the thing holding up everyone's fresh start. Discretion is the default.</p>
+    </div>
+    <div class="trans reveal">
+      <h3>Probate, trust &amp; inherited property in {{ name }}</h3>
+      <p>When you've inherited a {{ name }} home or are settling an estate, we make the sale the easy part. We coordinate with your attorney or trustee, handle clean-out and preparation, and guide the listing from first walk-through to close with patience and care — often while the family is grieving and stretched thin. You don't manage vendors or chase details; we do.</p>
+    </div>
+    <div class="trans reveal">
+      <h3>Relocation &amp; major life change in {{ name }}</h3>
+      <p>A new job, a move closer to family, a health change, or simply a new season — when you're leaving {{ name }}, we compress the timeline and manage the distance. We can coordinate prep, marketing, and closing while you focus on what's next, and structure the sale so you're never caught between two homes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="approach-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why {{ name }} sellers choose us</p>
+      <h2>Built to get you the most, with the least chaos.</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="mark"></div><div class="k">Sell-side only</div><p>We never represent buyers. In {{ name }}, all of our attention goes to netting you the most, not managing the other side of the deal.</p></div>
+      <div class="pillar reveal"><div class="mark"></div><div class="k">One coordinated plan</div><p>Prep, staging, listing, sale, belongings, and the move — handled as a single process so nothing lands on you.</p></div>
+      <div class="pillar reveal"><div class="mark"></div><div class="k">Discretion &amp; pace</div><p>Private, respectful, and on your timeline. No pressure, no rushed deadlines, especially when the reason for selling is a hard one.</p></div>
+      <div class="pillar reveal"><div class="mark"></div><div class="k">Priced to sell right</div><p>Accurate pricing from day one, based on real {{ name }} comps — the single biggest driver of a fast sale at top dollar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL EXPERTISE -->
+<section class="local">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">On-the-ground {{ name }} expertise</p>
+      <h2>We know these streets, not just the ZIP codes.</h2>
+      <p>Buyers pay attention to the block, the school boundary, and the walk to Ventura. So do we.</p>
+    </div>
+    <div class="local-grid reveal">
+      <div>
+        <h3>Neighborhoods we sell in</h3>
+        <div class="chips">
+          {%- for n in neighborhoods %}<span class="chip">{{ n }}</span>{% endfor %}
+        </div>
+      </div>
+      <div>
+        <h3>The {{ name }} buyers love</h3>
+        <p>Walkability to {{ landmarks[0] }} and {{ landmarks[1] }}, proximity to {{ landmarks[2] }}, weekends at {{ landmarks[3] }}, and access to schools like {{ schools[0] }} and {{ schools[2] }} all move the needle on price. We position your home to the buyers those things attract.</p>
+        <p class="near">Also serving nearby {{ nearby | join(", ") }}.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLD PROOF -->
+<section class="proof">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Recent {{ name }} results</p>
+      <h2>Real homes, real outcomes.</h2>
+    </div>
+    <ul class="proof-list reveal">
+      {%- for s in sold_proof %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">{{ name }} sellers ask</p>
+      <h2>Straight answers.</h2>
+    </div>
+    <div class="reveal">
+      {%- for f in faqs %}
+      <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="article-cta">
+  <div class="glow-top"></div>
+  <div class="wrap">
+    <p class="eyebrow">{{ name }} home sellers</p>
+    <h2>Let's talk about your {{ name }} home.</h2>
+    <p>A free, no-pressure valuation and an honest look at your options — whatever brought you here.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="/#contact">Request your free valuation</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phoneHref }}">Call or text {{ site.phoneDisplay }}</a>
+    </div>
+  </div>
+</section>

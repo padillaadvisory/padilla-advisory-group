@@ -9,5 +9,8 @@ eleventyExcludeFromCollections: true
   {% for post in collections.posts %}
   <url><loc>{{ site.url }}{{ post.url }}</loc><lastmod>{{ post.date | yyyymmdd }}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   {% endfor %}
+  {% for loc in collections.locations %}
+  <url><loc>{{ site.url }}{{ loc.url }}</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  {% endfor %}
   <url><loc>{{ site.url }}/assets/la-downsizers-playbook.pdf</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
