@@ -154,8 +154,8 @@
 
   footer.site{background:var(--navy-deep);color:#8f9bad;font-size:.88rem;}
   footer.site .wrap{padding-block:2.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem;align-items:flex-start;}
-  footer .flogo{height:58px;width:auto;margin-bottom:.5rem;display:block;}
-  footer .ftag{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold);}
+  footer .flogo{height:72px;width:auto;margin-bottom:.7rem;display:block;}
+  footer .ftag{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);}
   footer .legal{max-width:48ch;line-height:1.65;}
   footer a{color:var(--gold);}
 
