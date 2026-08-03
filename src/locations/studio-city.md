@@ -37,9 +37,9 @@ nearby:
   - "Valley Village"
   - "North Hollywood"
 market_note: "Studio City is one of the most sought-after markets in the San Fernando Valley, prized for its walkable stretch of Ventura Boulevard, the Carpenter Charter school district, and a mix of mid-century, traditional, and new-construction homes. Homes south of Ventura and in pockets like Colfax Meadows and the Silver Triangle command a premium, and well-prepared, correctly-priced listings still move quickly to motivated buyers."
-# Replace the placeholders below with REAL closed sales to build proof.
-sold_proof:
-  - "[Recent Studio City sale — street/block, sale price, days on market, and the situation, e.g. \u201cColfax Meadows 3BR, sold in 9 days at $X, longtime owners downsizing to Palm Desert.\u201d]"
-  - "[Another closed Studio City listing — the more specific, the more it ranks and converts.]"
-  - "[A probate, divorce, or trust sale you handled in or near Studio City, if you have one.]"
+recent_work:
+  - "Represented sellers on multiple homes on Sunshine Terrace."
+  - "Sold a Laurelcrest home for an owner who had already relocated abroad \u2014 managed the entire sale remotely on their behalf."
+  - "Deeply experienced across probate, divorce, and trust sales, and downsizing throughout Studio City."
+sold_proof: []
 ---

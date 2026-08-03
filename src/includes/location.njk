@@ -173,16 +173,33 @@ layout: base.njk
   </div>
 </section>
 
-<!-- SOLD PROOF -->
+<!-- TRACK RECORD -->
 <section class="proof">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Recent {{ name }} results</p>
-      <h2>Real homes, real outcomes.</h2>
+      <p class="eyebrow">Track record</p>
+      <h2>Serious firepower behind your sale.</h2>
     </div>
+    <div class="proof-stat reveal">
+      <div class="bignum">{{ site.production.stat }}</div>
+      <div>
+        <p>{{ site.production.line }}</p>
+        <p class="near">Alex actively represents {{ name }} home sellers under {{ site.brokerage }}.</p>
+      </div>
+    </div>
+    {%- if recent_work and recent_work.length %}
+    <div class="recent reveal">
+      <h3>Recent {{ name }} work</h3>
+      <ul class="proof-list">
+        {%- for w in recent_work %}<li>{{ w }}</li>{% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+    {%- if sold_proof and sold_proof.length %}
     <ul class="proof-list reveal">
       {%- for s in sold_proof %}<li>{{ s }}</li>{% endfor %}
     </ul>
+    {%- endif %}
   </div>
 </section>
 
