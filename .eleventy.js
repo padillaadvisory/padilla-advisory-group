@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
   eleventyConfig.addPassthroughCopy("src/thank-you.html");
+  eleventyConfig.addPassthroughCopy("src/thanks.html");
   eleventyConfig.addPassthroughCopy("src/_redirects");
 
   // -- Site data (single source of truth; edit here to launch a new market) --
