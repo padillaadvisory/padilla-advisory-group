@@ -3,6 +3,7 @@ layout: base.njk
 ---
 {%- set topHoods = neighborhoods[0] + ", " + neighborhoods[1] + ", and " + neighborhoods[2] -%}
 {%- set zipList = zips | join(", ") -%}
+{%- set art = "an" if (name[0] | lower) in ["a","e","i","o","u"] else "a" -%}
 {%- set faqs = [
   { "q": "How much is my home worth in " + name + "?",
     "a": "The honest answer is that it depends on the street, the condition, and the moment — " + name + " values vary block to block. We give you a straight, no-obligation valuation based on current comparable sales in " + name + ", not a generic online estimate. It is free, and there is no pressure to list." },
@@ -13,8 +14,8 @@ layout: base.njk
   { "q": "Do you help with probate or trust sales in " + name + "?",
     "a": "Yes. We regularly help families and executors sell inherited and trust-held property in " + name + ", coordinating with your attorney, handling clean-out and preparation, and guiding the sale start to finish with patience and discretion." },
   { "q": "Can you sell a house during a divorce in " + name + "?",
-    "a": "Yes. Selling a " + name + " home during a divorce calls for neutrality, clear communication with both parties and any attorneys, and a smooth, low-drama process. We keep it professional and moving so the sale isn't the thing holding everyone up." },
-  { "q": "I'm downsizing from a " + name + " home — where do I start?",
+    "a": "Yes. Selling " + art + " " + name + " home during a divorce calls for neutrality, clear communication with both parties and any attorneys, and a smooth, low-drama process. We keep it professional and moving so the sale isn't the thing holding everyone up." },
+  { "q": "I'm downsizing from " + art + " " + name + " home — where do I start?",
     "a": "Start with a conversation. We'll walk your home, give you its current value, and map the whole path — prep, belongings, listing, sale, and the move — as one plan on your timeline. Downsizing longtime " + name + " owners is the heart of what we do." },
   { "q": "Do you charge for a home valuation?",
     "a": "No. Your " + name + " home valuation is complimentary and comes with no obligation — just an honest look at what your home is worth today and what your options are." },
@@ -85,8 +86,8 @@ layout: base.njk
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>{{ name }}</span></nav>
     <div class="hero-rule"></div>
     <p class="eyebrow">{{ name }} &middot; Life-Transition Home Sales</p>
-    <h1>Selling a {{ name }} home when life changes.</h1>
-    <p class="intro">Downsizing, divorce, probate, or a move you've put off for years — when it's time to sell a {{ name }} home through a life transition, Padilla Advisory Group represents you, and only you. The most equity, the least stress, handled with discretion.</p>
+    <h1>Selling {{ art }} {{ name }} home when life changes.</h1>
+    <p class="intro">Downsizing, divorce, probate, or a move you've put off for years — when it's time to sell {{ art }} {{ name }} home through a life transition, Padilla Advisory Group represents you, and only you. The most equity, the least stress, handled with discretion.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="/#contact">Request your free {{ name }} valuation</a>
       <a class="btn btn-ghost" href="#transitions">See how we help</a>
@@ -124,7 +125,7 @@ layout: base.njk
     </div>
     <div class="trans reveal">
       <h3>Probate, trust &amp; inherited property in {{ name }}</h3>
-      <p>When you've inherited a {{ name }} home or are settling an estate, we make the sale the easy part. We coordinate with your attorney or trustee, handle clean-out and preparation, and guide the listing from first walk-through to close with patience and care — often while the family is grieving and stretched thin. You don't manage vendors or chase details; we do.</p>
+      <p>When you've inherited {{ art }} {{ name }} home or are settling an estate, we make the sale the easy part. We coordinate with your attorney or trustee, handle clean-out and preparation, and guide the listing from first walk-through to close with patience and care — often while the family is grieving and stretched thin. You don't manage vendors or chase details; we do.</p>
     </div>
     <div class="trans reveal">
       <h3>Relocation &amp; major life change in {{ name }}</h3>
