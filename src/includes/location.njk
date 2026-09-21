@@ -10,7 +10,7 @@ layout: base.njk
   { "q": "How fast do homes sell in " + name + "?",
     "a": "Well-prepared, correctly-priced " + name + " homes still move quickly to motivated buyers. The single biggest factor is pricing it right from day one — homes that are priced accurately and shown well tend to sell far faster than those that 'test the market' and chase it down." },
   { "q": "Which " + name + " neighborhoods are most in demand?",
-    "a": "Pockets like " + topHoods + " tend to draw the strongest buyer interest, along with homes south of Ventura Boulevard and inside the most sought-after school boundaries. We can tell you exactly how your specific location and street affect your sale." },
+    "a": "Pockets like " + topHoods + " tend to draw the strongest buyer interest, along with homes " + (demand_hook or "south of Ventura Boulevard") + " and inside the most sought-after school boundaries. We can tell you exactly how your specific location and street affect your sale." },
   { "q": "Do you help with probate or trust sales in " + name + "?",
     "a": "Yes. We regularly help families and executors sell inherited and trust-held property in " + name + ", coordinating with your attorney, handling clean-out and preparation, and guiding the sale start to finish with patience and discretion." },
   { "q": "Can you sell a house during a divorce in " + name + "?",
@@ -19,8 +19,8 @@ layout: base.njk
     "a": "Start with a conversation. We'll walk your home, give you its current value, and map the whole path — prep, belongings, listing, sale, and the move — as one plan on your timeline. Downsizing longtime " + name + " owners is the heart of what we do." },
   { "q": "Do you charge for a home valuation?",
     "a": "No. Your " + name + " home valuation is complimentary and comes with no obligation — just an honest look at what your home is worth today and what your options are." },
-  { "q": "Do you represent buyers, or only sellers?",
-    "a": "We work the sell side only. In " + name + ", that means our entire focus is getting sellers the most equity with the least stress — we are never distracted representing the other side of the table." }
+  { "q": "What does the process look like, start to finish?",
+    "a": "It starts with a relaxed, no-pressure conversation about your options and a possible timeline. From there we can help with decluttering and organizing, an estate sale if it is needed, and any updates or light upgrades that would add value — then staging and bringing it to market, all handled for you with complete professionalism, at your pace." }
 ] -%}
 
 <script type="application/ld+json">
@@ -99,10 +99,10 @@ layout: base.njk
 <!-- INTRO -->
 <section class="moment">
   <div class="wrap" style="max-width:820px;">
-    <p class="eyebrow">Local, and sell-side only</p>
+    <p class="eyebrow">Local, and full-service</p>
     <p class="big">Life transitions are hard enough. Selling the house shouldn't add to the weight.</p>
     <p>{{ market_note }}</p>
-    <p>We work exclusively with {{ name }} homeowners who are selling — never buyers — so every ounce of our attention goes to your equity, your timeline, and your peace of mind. Whatever brought you to this decision, we've guided people through it before, right here in {{ name }}.</p>
+    <p>We are with {{ name }} homeowners at every step of the sale — from the first no-pressure conversation about your options and timeline to decluttering, updates that add value, staging, and closing — so your equity, your timeline, and your peace of mind stay the whole focus. Whatever brought you to this decision, we have guided people through it before, right here in {{ name }}.</p>
   </div>
 </section>
 
@@ -142,7 +142,7 @@ layout: base.njk
       <h2>Built to get you the most, with the least chaos.</h2>
     </div>
     <div class="pillars">
-      <div class="pillar reveal"><div class="mark"></div><div class="k">Sell-side only</div><p>We never represent buyers. In {{ name }}, all of our attention goes to netting you the most, not managing the other side of the deal.</p></div>
+      <div class="pillar reveal"><div class="mark"></div><div class="k">A no-pressure start</div><p>It begins with a relaxed conversation about your options and a realistic timeline — no obligation. Everything after is handled with complete professionalism, at your pace.</p></div>
       <div class="pillar reveal"><div class="mark"></div><div class="k">One coordinated plan</div><p>Prep, staging, listing, sale, belongings, and the move — handled as a single process so nothing lands on you.</p></div>
       <div class="pillar reveal"><div class="mark"></div><div class="k">Discretion &amp; pace</div><p>Private, respectful, and on your timeline. No pressure, no rushed deadlines, especially when the reason for selling is a hard one.</p></div>
       <div class="pillar reveal"><div class="mark"></div><div class="k">Priced to sell right</div><p>Accurate pricing from day one, based on real {{ name }} comps — the single biggest driver of a fast sale at top dollar.</p></div>
@@ -156,7 +156,7 @@ layout: base.njk
     <div class="section-head reveal">
       <p class="eyebrow">On-the-ground {{ name }} expertise</p>
       <h2>We know these streets, not just the ZIP codes.</h2>
-      <p>Buyers pay attention to the block, the school boundary, and the walk to Ventura. So do we.</p>
+      <p>Buyers pay attention to the block, the school boundary, and {{ local_hook or "the walk to Ventura" }}. So do we.</p>
     </div>
     <div class="local-grid reveal">
       <div>
