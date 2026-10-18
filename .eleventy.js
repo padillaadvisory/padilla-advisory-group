@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
 
   // Blog collection, newest first
   eleventyConfig.addCollection("posts", (c) =>
-    c.getFilteredByGlob("src/blog/posts/*.md").sort((a, b) => b.date - a.date)
+    c.getFilteredByGlob("src/blog/posts/*.md").filter((p) => p.date <= new Date()).sort((a, b) => b.date - a.date)
   );
 
   // Location / service-area pages, alphabetical
