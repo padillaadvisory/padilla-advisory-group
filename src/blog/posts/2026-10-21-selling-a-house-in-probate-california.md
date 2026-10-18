@@ -2,6 +2,7 @@
 title: "How Do You Sell a House in Probate in California? A Step-by-Step Timeline for Executors"
 description: "Named executor and not sure where to start? Here's how a California probate home sale actually works, what the court controls, and where the timeline can stretch."
 date: 2026-10-21
+disclaimer: false
 ---
 
 You were named executor, or the family asked you to step in. There is a house, a stack of paperwork, and a question you'd rather not get wrong: how do I sell this property legally, without leaving the estate exposed and without it dragging on for years?
