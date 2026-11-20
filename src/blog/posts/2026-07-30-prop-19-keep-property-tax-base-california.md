@@ -21,7 +21,7 @@ In plain terms: the tax advantage you earned by owning your home for decades doe
 There are two scenarios:
 
 - **You buy a home of equal or lesser value.** Your existing tax base transfers directly. You keep paying roughly what you pay now.
-- **You buy a more expensive home.** You still keep your base, but the difference in price gets added on top. You're only taxed on the *upgrade*, not the whole new purchase.
+- **You buy a more expensive home.** You still keep your base, but the amount above a small threshold gets added on top. You're only taxed on the *upgrade*, not the whole new purchase.
 
 Either way, you're almost always far better off than starting from a brand-new, full-market assessment.
 
@@ -29,9 +29,9 @@ Either way, you're almost always far better off than starting from a brand-new, 
 
 This is the part that costs people the benefit, so read it twice.
 
-You have to file for the transfer within a specific window — generally **before you sell, or within two years of buying your new home.** Miss that window and you can lose the ability to move your tax base at all.
+Two clocks matter. The replacement home has to be bought (or built) within **two years before or two years after** you sell your original home. And you file your claim with the county assessor within **three years** of buying or completing the replacement. A late claim is still accepted, but the savings only start in the year you file.
 
-> The advantage is real. The deadline is real. Don't find out about both after you've already sold.
+> The advantage is real. The deadlines are real. Don't find out about both after you've already sold.
 
 This is exactly the kind of thing worth mapping out *before* you list, not after. I'm not a tax professional, and your situation has its own details — so the move is to loop in your CPA and your agent early, while you still have every option open.
 
@@ -45,4 +45,4 @@ When you add Prop 19 into the picture, the math often tilts further toward movin
 
 If you're 55 or older and thinking about downsizing anywhere in California, Proposition 19 may let you keep the property tax advantage you've spent decades building. It's one of the most valuable — and most overlooked — tools available to longtime homeowners.
 
-If you want to understand exactly how it would apply to your home and your next place, that's a conversation worth having before anything goes on the market.
+For the full rules, including who qualifies, how the numbers work, and how to file, see our [Prop 19 transfer rules guide](/prop-19/). And if you want to understand exactly how it would apply to your home and your next place, that's a conversation worth having before anything goes on the market.
