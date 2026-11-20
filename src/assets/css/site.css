@@ -156,7 +156,8 @@
   footer.site .wrap{padding-block:2.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem;align-items:flex-start;}
   footer .flogos{display:flex;align-items:center;gap:1.5rem;margin-bottom:.9rem;}
   footer .flogo{height:96px;width:auto;display:block;}
-  @media(max-width:520px){ footer .flogo{height:72px;} }
+  footer .flogo[src*="logo-plg"]{height:120px;}
+  @media(max-width:520px){ footer .flogo{height:72px;} footer .flogo[src*="logo-plg"]{height:90px;} }
   footer .ftag{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);}
   footer .legal{max-width:48ch;line-height:1.65;}
   footer a{color:var(--gold);}
