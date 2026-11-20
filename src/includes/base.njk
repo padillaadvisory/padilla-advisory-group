@@ -44,7 +44,7 @@
 <footer class="site">
   <div class="wrap">
     <div>
-      <img class="flogo" src="/assets/logo-white.png" alt="{{ site.name }} at {{ site.brokerage }}" />
+      <div class="flogos"><img class="flogo" src="/assets/logo-white.png" alt="{{ site.name }} at {{ site.brokerage }}" /><img class="flogo" src="/assets/logo-plg.jpg" alt="{{ site.brokerage }}" /></div>
       <div class="ftag">{{ site.tagline }}</div>
       {% if collections.locations.length %}<div class="areas">{% for loc in collections.locations %}<a href="{{ loc.url }}">{{ loc.data.name }}</a>{% endfor %}</div>{% endif %}
     </div>

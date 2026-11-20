@@ -36,11 +36,11 @@
   /* Header */
   header.site{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   .nav{display:flex;align-items:center;justify-content:space-between;padding-block:.85rem;gap:1rem;}
-  .brand-logo{height:48px;width:auto;display:block;}
+  .brand-logo{height:80px;width:auto;display:block;}
   .nav-links{display:flex;gap:2rem;align-items:center;}
   .nav-links a{text-decoration:none;font-size:.93rem;font-weight:500;}
   .nav-links a.plain:hover{color:var(--gold-deep);}
-  @media(max-width:860px){ .nav-links a.plain{display:none;} .brand-logo{height:36px;} }
+  @media(max-width:860px){ .nav-links a.plain{display:none;} .brand-logo{height:52px;} }
 
   /* Hero with horizon signature */
   .hero{position:relative;overflow:hidden;color:var(--paper);background:linear-gradient(180deg,#02193C 0%,#0a244a 52%,#03152f 100%);}
@@ -154,7 +154,9 @@
 
   footer.site{background:var(--navy-deep);color:#8f9bad;font-size:.88rem;}
   footer.site .wrap{padding-block:2.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem;align-items:flex-start;}
-  footer .flogo{height:72px;width:auto;margin-bottom:.7rem;display:block;}
+  footer .flogos{display:flex;align-items:center;gap:1.5rem;margin-bottom:.9rem;}
+  footer .flogo{height:96px;width:auto;display:block;}
+  @media(max-width:520px){ footer .flogo{height:72px;} }
   footer .ftag{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);}
   footer .legal{max-width:48ch;line-height:1.65;}
   footer a{color:var(--gold);}
